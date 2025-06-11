@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message Channel to Update the Firstname and Lastname</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>First Name</description>
+        <fieldName>fName</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Last Name</description>
+        <fieldName>lName</fieldName>
+    </lightningMessageFields>
+    <masterLabel>CountingUpdated</masterLabel>
+</LightningMessageChannel>

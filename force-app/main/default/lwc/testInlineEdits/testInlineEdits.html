@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Inline Editing Test Component">
+        <lightning-datatable
+        key-field="Id"
+        data={conData}
+        draft-values={conDraftValues}
+        onsave={handleConSave}
+        columns={conColumns}></lightning-datatable>
+    </lightning-card>
+</template>

@@ -1,0 +1,67 @@
+<template>
+    <lightning-card title="UD Combobox">
+        <div class="slds-p-around_small">
+            <lightning-combobox
+                name="Object_Type"
+                label="Object"
+                value=""
+                options={options}
+                onchange={handleChange}></lightning-combobox>
+        </div>
+        <div class="slds-p-around_medium">
+            <template if:true={accTable}>
+                <div class="slds-text-align_right slds-p-bottom_large">
+                    <lightning-button
+                        variant="brand"
+                        label="Delete"
+                        title="Delete"
+                        disabled={isButtonDisabled}
+                        onclick={handleDelete}></lightning-button>
+                </div>
+                <lightning-datatable
+                    key-field="Id"
+                    data={data}
+                    onrowselection={handleRowSelection}
+                    draft-values={draftValues}
+                    onsave={handleSave}
+                    columns={columns}></lightning-datatable>
+            </template>
+            <template if:true={conTable}>
+                <div class="slds-text-align_right slds-p-bottom_large">
+                    <lightning-button
+                        variant="brand"
+                        label="Delete"
+                        title="Delete"
+                        disabled={isButtonDisabled}
+                        onclick={handleConDelete}></lightning-button>
+                </div>
+                <lightning-datatable
+                    key-field="Id"
+                    data={conData}
+                    onrowselection={handleRowSelection}
+                    draft-values={conDraftValues}
+                    onsave={handleConSave}
+                    columns={conColumns}></lightning-datatable>
+                    
+            </template>
+            <template if:true={oppTable}>
+                <div class="slds-text-align_right slds-p-bottom_large">
+                    <lightning-button
+                        variant="brand"
+                        label="Delete"
+                        title="Delete"
+                        disabled={isButtonDisabled}
+                        onclick={handleOppDelete}></lightning-button>
+                </div>
+                <lightning-datatable
+                    key-field="Id"
+                    data={oppData}
+                    draft-values={oppDraftValues}
+                    onsave={handleOppSave}
+                    columns={oppColumns}></lightning-datatable>
+            </template>
+        </div>
+
+    </lightning-card>
+    
+</template>

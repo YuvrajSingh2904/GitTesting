@@ -1,0 +1,17 @@
+<template>
+    <lightning-card >
+        <h1 class="slds-text-heading_medium slds-text-align_center"> Parent Component </h1>
+        <div class="slds-p-around_small">
+            <lightning-combobox
+                name="Object_Type"
+                label="Object"
+                value=""
+                options={options}
+                onchange={handleChange}></lightning-combobox>
+        </div>
+
+        <c-child-combobox tableaccount={accTable} tablecontact={conTable} tableopp={oppTable}></c-child-combobox>
+
+    </lightning-card>
+    
+</template>

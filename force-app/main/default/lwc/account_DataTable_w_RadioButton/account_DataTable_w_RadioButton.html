@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title='Account List with Related Contacts'>
+        <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Account Name</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template if:true={wiredAccounts.data}>
+                <template for:each={wiredAccounts.data} for:item='account'>
+                    <tr key={account.Id}>
+                        <td>
+                            <input type="radio" name="accountRadio" value={account.Id} onchange={handleRadioChange} />
+                        </td>
+                        <td>{account.Name}</td>
+                        <td>{account.Rating}</td>
+                    </tr>
+                </template>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card> 
+    <c-account-datatable-child-comp parentinput={idForChild}></c-account-datatable-child-comp>
+</template>

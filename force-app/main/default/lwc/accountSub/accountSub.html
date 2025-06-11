@@ -1,0 +1,14 @@
+<template>
+    <lightning-card aria-label="Contact Subscriber" icon-name="standard:account" variant="base">
+         <template for:each={accData} for:item="acc">
+           <div key={acc.Id} class="slds-p-horizontal_medium slds-p-vertical_medium">
+                 <lightning-icon 
+                   icon-name="utility:contact" 
+                 ></lightning-icon>
+             <br/><strong>Account Name</strong> = <span class="slds-text-font_monospace">{acc.Name}</span>
+             <br/> <strong> Acocunt Rating </strong> = <span class="slds-text-font_monospace">{acc.Rating}</span>
+           </div>
+         </template> 
+ 
+    </lightning-card>
+ </template>
