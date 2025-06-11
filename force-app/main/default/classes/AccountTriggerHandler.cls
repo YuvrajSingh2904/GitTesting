@@ -8,6 +8,7 @@ public with sharing class AccountTriggerHandler {
             }
         }
     }
+    //Comment to make a change for the Git Branch
     
     //whenver account's phone field is updated then all related contacts phone should also get updated with parent account's phone 
     public static void updateContactPhone(List<Account> accList, Map<Id, Account> oldMap){
