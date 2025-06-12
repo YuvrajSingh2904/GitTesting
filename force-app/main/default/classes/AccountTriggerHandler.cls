@@ -2,9 +2,9 @@ public with sharing class AccountTriggerHandler {
     //Write a trigger whenever the Account Rating is changing then the Old Value of the rating should be populated in the Account description
     public static void updateDescriptionBasedonRating(List<Account> accList, Map<id, Account> oldMap){
         for (Account acc: accList){
-            Account oldAcc = oldMap.get(acc.id);
-            if(acc.Rating != oldAcc.Rating){
-                acc.Description = oldAcc.Rating;
+            Account oldAccount = oldMap.get(acc.id);
+            if(acc.Rating != oldAccount.Rating){
+                acc.Description = oldAccount.Rating;
             }
         }
     }
